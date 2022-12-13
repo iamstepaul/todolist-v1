@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js")
 
+const PORT = process.env.PORT || 8030
+
 const items = ["Buy Food", "Cook Food"];
 const workItems = [];
 
@@ -38,6 +40,6 @@ app.post("/work", function (req, res) {
   res.redirect("/work");
 });
 
-app.listen(8030, function () {
-  console.log("server started");
+app.listen(PORT, function () {
+  console.log(`server started at port: ${PORT}`);
 });
