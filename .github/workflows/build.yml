@@ -8,7 +8,7 @@ jobs:
       - run: npm --version
       - uses: actions/checkout@v3
       - run: npm install
-      - run: nodemon
+      - run: node app.js
 
 
 
