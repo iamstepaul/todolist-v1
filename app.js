@@ -1,8 +1,9 @@
 const express = require("express");
+require('dotenv').config(); 
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js")
 
-const PORT = process.env.PORT || 8030
+const PORT = process.env.PORT
 
 const items = ["Buy Food", "Cook Food"];
 const workItems = [];
