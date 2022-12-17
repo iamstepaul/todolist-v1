@@ -1,11 +1,18 @@
+name: Simple GitHub Actions
 on: push
 jobs:
   build-node:
+    name: Build and run a simple Todo Node Project
     runs-on: ubuntu-latest
     container: node:18.12.1
     steps:
       - run: node --version
+        name: Check Node Version
       - run: npm --version
+        name: Check NPM version
       - uses: actions/checkout@v3
+        name: Checkout Code from GitHub
       - uses: actions/setup-node@v3
+        name: Checkout Code for node setup
       - run: npm install
+        name: Install NPM packages
